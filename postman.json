@@ -1,0 +1,85 @@
+{
+	"info": {
+		"name": "Lumen JWT Starter",
+		"_postman_id": "8b8cf5bb-3642-7f76-bcdd-75a58f75ebc4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Generate Token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8282/generate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"generate"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Check Token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8282/check?token=eyJhbGciOiJSUzI1NiJ9.eyJuYmYiOjE1MTk0MDc1NzEsImlhdCI6MTUxOTQwNzU3MSwiZXhwIjoxNTE5NDExMTcxLCJ1c2VybmFtZSI6Im1lIn0.lgv_S6mDpamtkTPF-t6A4Oh_98ClIPD5fiyj7pT9ngAGbaCPZRYG6FRktxVnf0Mnw15OjelNmpyBEPkPv-FHa7RoUFOS_OhQ6W0YWp_2jgUEVGAfpuydVPbLq2N8QzQlRXBwmLbk_qbqXtn6PPS4Luhs4o32jMSlCx_VJ4RRQeE2rKpks3uFWl07WBJjSuVF4Kx5b-jPeI_2m9sGx1UqPbDyT38uPncOWP5IxW6UU-vy8l9OGgq6jEmL7qaQGqPaipCiLjXInFoP1PQFjz_ElG5Q4hdz3orox4O5wzAg7TzBv0UGdHLQXPpWtwGjacb1p_hQq7dW7aSrCnqogEzCzw",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"check"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJuYmYiOjE1MTk0MDc1NzEsImlhdCI6MTUxOTQwNzU3MSwiZXhwIjoxNTE5NDExMTcxLCJ1c2VybmFtZSI6Im1lIn0.lgv_S6mDpamtkTPF-t6A4Oh_98ClIPD5fiyj7pT9ngAGbaCPZRYG6FRktxVnf0Mnw15OjelNmpyBEPkPv-FHa7RoUFOS_OhQ6W0YWp_2jgUEVGAfpuydVPbLq2N8QzQlRXBwmLbk_qbqXtn6PPS4Luhs4o32jMSlCx_VJ4RRQeE2rKpks3uFWl07WBJjSuVF4Kx5b-jPeI_2m9sGx1UqPbDyT38uPncOWP5IxW6UU-vy8l9OGgq6jEmL7qaQGqPaipCiLjXInFoP1PQFjz_ElG5Q4hdz3orox4O5wzAg7TzBv0UGdHLQXPpWtwGjacb1p_hQq7dW7aSrCnqogEzCzw",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Invalidate Token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8282/invalidate?token=eyJhbGciOiJSUzI1NiJ9.eyJuYmYiOjE1MTk0MDc1NzEsImlhdCI6MTUxOTQwNzU3MSwiZXhwIjoxNTE5NDExMTcxLCJ1c2VybmFtZSI6Im1lIn0.lgv_S6mDpamtkTPF-t6A4Oh_98ClIPD5fiyj7pT9ngAGbaCPZRYG6FRktxVnf0Mnw15OjelNmpyBEPkPv-FHa7RoUFOS_OhQ6W0YWp_2jgUEVGAfpuydVPbLq2N8QzQlRXBwmLbk_qbqXtn6PPS4Luhs4o32jMSlCx_VJ4RRQeE2rKpks3uFWl07WBJjSuVF4Kx5b-jPeI_2m9sGx1UqPbDyT38uPncOWP5IxW6UU-vy8l9OGgq6jEmL7qaQGqPaipCiLjXInFoP1PQFjz_ElG5Q4hdz3orox4O5wzAg7TzBv0UGdHLQXPpWtwGjacb1p_hQq7dW7aSrCnqogEzCzw",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"invalidate"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJuYmYiOjE1MTk0MDc1NzEsImlhdCI6MTUxOTQwNzU3MSwiZXhwIjoxNTE5NDExMTcxLCJ1c2VybmFtZSI6Im1lIn0.lgv_S6mDpamtkTPF-t6A4Oh_98ClIPD5fiyj7pT9ngAGbaCPZRYG6FRktxVnf0Mnw15OjelNmpyBEPkPv-FHa7RoUFOS_OhQ6W0YWp_2jgUEVGAfpuydVPbLq2N8QzQlRXBwmLbk_qbqXtn6PPS4Luhs4o32jMSlCx_VJ4RRQeE2rKpks3uFWl07WBJjSuVF4Kx5b-jPeI_2m9sGx1UqPbDyT38uPncOWP5IxW6UU-vy8l9OGgq6jEmL7qaQGqPaipCiLjXInFoP1PQFjz_ElG5Q4hdz3orox4O5wzAg7TzBv0UGdHLQXPpWtwGjacb1p_hQq7dW7aSrCnqogEzCzw",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
