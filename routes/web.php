@@ -14,3 +14,7 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/generate', 'ExampleController@generate');
+$router->get('/check', 'ExampleController@check');
+$router->get('/invalidate', 'ExampleController@invalidate');
