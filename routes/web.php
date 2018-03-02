@@ -18,3 +18,4 @@ $router->get('/', function () use ($router) {
 $router->get('/generate', 'ExampleController@generate');
 $router->get('/check', 'ExampleController@check');
 $router->get('/invalidate', 'ExampleController@invalidate');
+$router->get('/refresh', 'ExampleController@refresh');

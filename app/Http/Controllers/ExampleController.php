@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Zrhm7232\Jwt\JWT;
+//require_once __DIR__ . '/vendor/autoload.php';
 
 class ExampleController extends Controller
 {
@@ -20,18 +22,27 @@ class ExampleController extends Controller
 
     public function generate()
     {
-        return new JsonResponse(createToken([
+        $jwt = new \Zrhm7232\Jwt\JWT();
+        return new JsonResponse($jwt->createToken([
             'username' => 'me'
         ]));
     }
 
     public function check(Request $request)
     {
-        return new JsonResponse(checkToken($request->input('token')));
+        $jwt = new JWT();
+        return new JsonResponse($jwt->checkToken($request->input('token')));
     }
 
     public function invalidate(Request $request)
     {
-        return new JsonResponse(invalidateToken($request->input('token')));
+        $jwt = new JWT();
+        return new JsonResponse($jwt->invalidateToken($request->input('token')));
+    }
+
+    public function refresh(Request $request)
+    {
+        $jwt = new JWT();
+        return new JsonResponse($jwt->refreshToken($request->input('token')));
     }
 }
